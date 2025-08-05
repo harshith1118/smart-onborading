@@ -50,9 +50,8 @@ To display PNG images in your README:
 2. Save images in the `screenshots/` folder in your project directory.
 3. Use the following links to display images:
 
-```
 ### Completion Rates by Department (Bar Chart)
-[Department Completion](screenshots/department_completion.png)
+![Department Completion](screenshots/department_completion.png)
 
 ### Manager Feedback vs. Modules Completed (Scatter Plot)
 ![Feedback vs Modules](screenshots/feedback_vs_modules.png)
@@ -68,9 +67,6 @@ To display PNG images in your README:
 
 ### Module Completion Trend by Start Date (Line Chart)
 ![Module Completion Trend](screenshots/module_completion_trend.png)
-```
-
-> **Note:** PNG images will only display if they exist in the specified folder and are not empty. If viewing on GitHub, ensure you commit the images to your repository.
 
 ## License
 
