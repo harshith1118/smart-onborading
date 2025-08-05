@@ -43,13 +43,6 @@ This project is a Streamlit-based interactive dashboard for analyzing onboarding
 - `README.md`: Project documentation.
 
 ## Screenshots
-
-To display PNG images in your README:
-
-1. Run the dashboard and use your OS screenshot tool to capture each chart/table.
-2. Save images in the `screenshots/` folder in your project directory.
-3. Use the following links to display images:
-
 ### Completion Rates by Department (Bar Chart)
 ![Department Completion](screenshots/department_completion.png)
 
