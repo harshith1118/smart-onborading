@@ -2,8 +2,6 @@
 
 This project is a Streamlit dashboard for analyzing onboarding training compliance, feedback, buddy assignment, and satisfaction.
 
-[Live Demo (Training Compliance Dashboard)](https://harshith1118-smart-onborading-onboarding-dashboard-ctuavy.streamlit.app/)
-
 ## Overview
 
 This project is a Streamlit-based interactive dashboard for analyzing onboarding training compliance, feedback, buddy assignment, and employee satisfaction. It uses Python, SQL (SQLite), and Plotly for data processing and visualization.
@@ -31,7 +29,7 @@ This project is a Streamlit-based interactive dashboard for analyzing onboarding
 3. **Interact with the dashboard:**
    - Use the sidebar to filter by department and location.
    - Explore all interactive charts and tables.
-
+  
 ## Data
 
 - The dashboard uses `onboarding_training_dataset.csv` as the source data.
@@ -43,6 +41,9 @@ This project is a Streamlit-based interactive dashboard for analyzing onboarding
 - `onboarding_training_dataset.csv`: Onboarding data file.
 - `onboarding_compliance.db`: SQLite database (auto-generated).
 - `README.md`: Project documentation.
+
+## Live Demo(Training Compliance Dashboard)]
+(https://harshith1118-smart-onborading-onboarding-dashboard-ctuavy.streamlit.app/)
 
 ## Screenshots
 ### Completion Rates by Department (Bar Chart)
