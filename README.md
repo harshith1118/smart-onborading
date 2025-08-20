@@ -20,13 +20,21 @@ This project is a Streamlit-based interactive dashboard for analyzing onboarding
 
 1. **Install dependencies:**
    ```bash
-   pip install streamlit==1.25.0 pandas==1.5.3 numpy==1.24.3 plotly==5.15.0
+   pip install -r requirements.txt
    ```
 2. **Start the dashboard:**
    ```bash
    streamlit run onboarding_dashboard.py
    ```
-3. **Interact with the dashboard:**
+   or use the provided batch file:
+   ```bash
+   run_app.bat
+   ```
+3. **Alternative: Use the keep-alive script:**
+   ```bash
+   python keep_alive.py
+   ```
+4. **Interact with the dashboard:**
    - Use the sidebar to filter by department and location.
    - Explore all interactive charts and tables.
   

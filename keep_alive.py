@@ -7,6 +7,26 @@ import requests
 import time
 import sys
 import os
+import subprocess
+import threading
+
+def start_streamlit_app():
+    """Start the Streamlit app in a separate thread"""
+    try:
+        # Set environment variable to disable telemetry
+        env = os.environ.copy()
+        env["STREAMLIT_DISABLE_TELEMETRY"] = "true"
+        
+        # Start Streamlit app
+        process = subprocess.Popen([
+            sys.executable, "-m", "streamlit", "run", "onboarding_dashboard.py"
+        ], env=env)
+        
+        print("Streamlit app started successfully")
+        return process
+    except Exception as e:
+        print(f"Error starting Streamlit app: {str(e)}")
+        return None
 
 def keep_alive(url, interval=300):  # 5 minutes default
     """
@@ -23,7 +43,7 @@ def keep_alive(url, interval=300):  # 5 minutes default
     try:
         while True:
             try:
-                response = requests.head(url, timeout=10)
+                response = requests.get(url, timeout=10)
                 if response.status_code == 200:
                     print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] App is alive (Status: {response.status_code})")
                 else:
@@ -45,4 +65,10 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         APP_URL = sys.argv[1]
     
-    keep_alive(APP_URL)
+    # Start Streamlit app in background
+    print("Starting Streamlit app...")
+    app_process = start_streamlit_app()
+    
+    # Start keep-alive service
+    if app_process:
+        keep_alive(APP_URL)

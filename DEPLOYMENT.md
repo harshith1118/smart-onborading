@@ -23,9 +23,14 @@ This file contains instructions and configurations to prevent the Streamlit app 
 
 3. **Configuration Files:**
    - config.toml contains server optimization settings
-   - requirements.txt has pinned versions for consistency
+   - requirements.txt has updated versions for compatibility
 
 4. **Code-level Solutions Implemented:**
    - Visual refresh indicator that updates with current time
    - Hidden elements that change with each page load
    - Efficient data processing to reduce load times
+
+5. **Keep-Alive Script:**
+   - A `keep_alive.py` script is included that can be run separately to periodically ping your app
+   - Usage: `python keep_alive.py YOUR_APP_URL`
+   - The script now also starts the Streamlit app automatically
