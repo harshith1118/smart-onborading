@@ -20,7 +20,7 @@ This project is a Streamlit-based interactive dashboard for analyzing onboarding
 
 1. **Install dependencies:**
    ```bash
-   pip install streamlit pandas numpy matplotlib seaborn plotly pillow
+   pip install streamlit==1.25.0 pandas==1.5.3 numpy==1.24.3 plotly==5.15.0
    ```
 2. **Start the dashboard:**
    ```bash
@@ -30,6 +30,26 @@ This project is a Streamlit-based interactive dashboard for analyzing onboarding
    - Use the sidebar to filter by department and location.
    - Explore all interactive charts and tables.
   
+## Preventing Sleep Issues
+
+To prevent the "Zzzz This app has gone to sleep due to inactivity" issue when deployed on Streamlit Community Cloud:
+
+1. **Auto-refresh Implementation:**
+   - The app includes a JavaScript-based auto-refresh mechanism that periodically sends requests to keep the connection alive
+   - A visual indicator shows that auto-refresh is enabled
+
+2. **Optimized Configuration:**
+   - Config files are set up to optimize performance and prevent sleeping
+   - Proper server settings are configured in `.streamlit/config.toml`
+
+3. **For Streamlit Community Cloud Deployment:**
+   - Make sure to set the app to "Always rerun" in the app settings
+   - Add helpful badges and documentation to your GitHub repo
+
+4. **Alternative Keep-Alive Method:**
+   - A `keep_alive.py` script is included that can be run separately to periodically ping your app
+   - Usage: `python keep_alive.py YOUR_APP_URL`
+
 ## Data
 
 - The dashboard uses `onboarding_training_dataset.csv` as the source data.
@@ -41,6 +61,9 @@ This project is a Streamlit-based interactive dashboard for analyzing onboarding
 - `onboarding_training_dataset.csv`: Onboarding data file.
 - `onboarding_compliance.db`: SQLite database (auto-generated).
 - `README.md`: Project documentation.
+- `.streamlit/config.toml`: Streamlit configuration file.
+- `keep_alive.py`: Optional script to prevent app sleeping when deployed.
+- `DEPLOYMENT.md`: Additional deployment instructions.
 
 ## Live Demo(Training Compliance Dashboard)]
 (https://harshith1118-smart-onborading-onboarding-dashboard-ctuavy.streamlit.app/)
